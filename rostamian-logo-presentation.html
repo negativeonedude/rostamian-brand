@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rostamian — Logo &amp; Identity Presentation</title>
+<meta name="description" content="Logo and color presentation for the Rostamian brand identity — the mark, the lettering, and the palette.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ---------- persian webfonts (local) ---------- */
+  @font-face{font-family:'Doran';src:url('assets/fonts/Doran-Thin.woff') format('woff');font-weight:100;font-style:normal;font-display:swap}
+  @font-face{font-family:'Doran';src:url('assets/fonts/Doran-Light.woff') format('woff');font-weight:300;font-style:normal;font-display:swap}
+  @font-face{font-family:'Doran';src:url('assets/fonts/Doran-Regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:'Doran';src:url('assets/fonts/Doran-Medium.woff') format('woff');font-weight:500;font-style:normal;font-display:swap}
+  @font-face{font-family:'Doran';src:url('assets/fonts/Doran-Bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}
+  @font-face{font-family:'Doran';src:url('assets/fonts/Doran-ExtraBold.woff') format('woff');font-weight:800;font-style:normal;font-display:swap}
+  @font-face{font-family:'Nian';src:url('assets/fonts/Nian-Thin.woff') format('woff');font-weight:100;font-style:normal;font-display:swap}
+  @font-face{font-family:'Nian';src:url('assets/fonts/Nian-ExtraLight.woff') format('woff');font-weight:200;font-style:normal;font-display:swap}
+  @font-face{font-family:'Nian';src:url('assets/fonts/Nian-Light.woff') format('woff');font-weight:300;font-style:normal;font-display:swap}
+  @font-face{font-family:'Nian';src:url('assets/fonts/Nian-Regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:'Nian';src:url('assets/fonts/Nian-Bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}
+  @font-face{font-family:'Nian';src:url('assets/fonts/Nian-ExtraBold.woff') format('woff');font-weight:800;font-style:normal;font-display:swap}
+  @font-face{font-family:'Nian';src:url('assets/fonts/Nian-Black.woff') format('woff');font-weight:900;font-style:normal;font-display:swap}
+  :root{
+    --paper:#F5F1E8;
+    --paper-soft:#EDE7D9;
+    --taupe:#9B8E6E;
+    --taupe-deep:#8A7D5E;
+    --brown:#603913;
+    --brown-lift:#6F4519;
+    --ink:#231F20;
+    --ink-soft:#4A453D;
+    --cream:#F5F1E8;
+    --hairline:rgba(35,31,32,.16);
+    --hairline-strong:rgba(35,31,32,.38);
+    --hairline-cream:rgba(245,241,232,.24);
+    --font-display:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+    --font-display-latin:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+    --font-body:"Jost","Avenir Next","Century Gothic","Segoe UI",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:88px}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-weight:300;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--brown);color:var(--cream)}
+  :focus-visible{outline:2px solid var(--brown);outline-offset:3px}
+  .on-dark :focus-visible{outline-color:var(--cream)}
+
+  .container{max-width:1180px;margin:0 auto;padding:0 clamp(24px,5vw,56px)}
+  section{padding:clamp(72px,9vw,128px) 0}
+
+  .kicker{
+    display:flex;align-items:center;gap:14px;
+    font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--brown);
+  }
+  .kicker::before{content:"";width:34px;height:1px;background:var(--brown)}
+  h2{
+    font-family:var(--font-display);font-weight:500;
+    font-size:clamp(34px,4.4vw,54px);line-height:1.12;letter-spacing:-.01em;
+    margin-top:18px;text-wrap:balance;
+  }
+  .section-note{margin-top:14px;max-width:56ch;color:var(--ink-soft);text-wrap:pretty}
+  .on-dark .kicker{color:var(--cream)}
+  .on-dark .kicker::before{background:var(--cream)}
+
+  /* ---------- top navigation ---------- */
+  .top-nav{
+    position:fixed;inset:0 0 auto 0;z-index:50;height:64px;
+    display:flex;align-items:center;
+    transition:background .3s ease,border-color .3s ease;
+    border-bottom:1px solid transparent;
+  }
+  .top-nav.scrolled{background:rgba(245,241,232,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom-color:var(--hairline)}
+  .top-nav .container{display:flex;align-items:center;justify-content:space-between;width:100%}
+  .brand{display:flex;align-items:center}
+  .brand img{height:30px;width:auto;display:block}
+  .nav-right{display:flex;align-items:center;gap:30px}
+  .nav-links{display:flex;gap:30px}
+  .nav-links a{
+    font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-soft);transition:color .2s ease;
+  }
+  .nav-links a:hover{color:var(--brown)}
+  .lang-select-wrap{position:relative;display:inline-flex}
+  .lang-select-wrap::after{
+    content:"";position:absolute;inset-inline-end:16px;top:50%;
+    width:7px;height:7px;transform:translateY(-65%) rotate(45deg);
+    border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;
+    pointer-events:none;
+  }
+  .lang-select{
+    min-height:44px;min-width:112px;appearance:none;-webkit-appearance:none;-moz-appearance:none;
+    padding-block:0;padding-inline-start:16px;padding-inline-end:40px;
+    background:transparent;border:1px solid var(--hairline-strong);border-radius:0;color:var(--ink);
+    font-family:'Nian','Vazirmatn',Tahoma,sans-serif;font-size:13px;font-weight:700;letter-spacing:0;
+    cursor:pointer;transition:border-color .2s ease,color .2s ease,background-color .2s ease;
+  }
+  .lang-select:hover{border-color:var(--brown);color:var(--brown);background-color:rgba(96,57,19,.05)}
+  .lang-select:focus-visible{outline:2px solid var(--brown);outline-offset:3px}
+
+  /* ---------- cover ---------- */
+  .cover{
+    min-height:100vh;min-height:100svh;
+    background:var(--paper);
+    display:grid;place-items:center;
+    position:relative;padding:96px 0;
+  }
+  .cover-mat{position:absolute;inset:18px;border:1px solid var(--hairline);pointer-events:none}
+  .cover-inner{text-align:center;padding:0 24px}
+  .cover-kicker{
+    display:inline-flex;align-items:center;gap:16px;
+    font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--brown);
+  }
+  .cover-kicker::before,.cover-kicker::after{content:"";width:36px;height:1px;background:var(--hairline-strong)}
+  .cover-lockup{margin:50px 0 34px}
+  .cover-lockup img{width:clamp(320px,56vw,700px);height:auto}
+  .cover-sub{
+    font-family:var(--font-display);font-style:italic;font-weight:500;
+    font-size:clamp(18px,2.2vw,23px);color:var(--ink-soft);
+    margin-top:8px;
+  }
+  .cover-meta{
+    position:absolute;left:0;right:0;bottom:34px;
+    display:flex;justify-content:space-between;
+    padding:0 clamp(28px,4vw,52px);
+    font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- overview ---------- */
+  .overview-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(40px,6vw,84px);align-items:start}
+  .overview-copy p+p{margin-top:18px}
+  .overview-copy p{color:var(--ink-soft);text-wrap:pretty}
+  .lead{
+    font-family:var(--font-display);font-size:clamp(21px,2.3vw,26px);
+    line-height:1.45;color:var(--ink);text-wrap:pretty;
+  }
+  .stats{display:flex;gap:clamp(28px,4vw,56px);margin-top:44px;padding-top:28px;border-top:1px solid var(--hairline)}
+  .stat b{display:block;font-family:var(--font-display);font-weight:600;font-size:clamp(38px,4vw,52px);line-height:1;color:var(--brown)}
+  .stat span{display:block;margin-top:8px;font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+
+  /* ---------- logo suite ---------- */
+  .suite{background:var(--paper-soft)}
+  .suite-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:52px}
+  .tile .canvas{
+    aspect-ratio:4/3;border:1px solid var(--hairline);background:var(--paper);
+    display:grid;place-items:center;overflow:hidden;position:relative;
+    transition:border-color .25s ease,transform .25s ease;
+  }
+  .tile:hover .canvas{border-color:var(--hairline-strong);transform:translateY(-3px)}
+  .tile .canvas.deep{background:var(--brown);border-color:var(--brown)}
+  .tile .canvas img{transition:transform .25s ease}
+  .tile:hover .canvas img{transform:scale(1.02)}
+  .tile img.h-lockup{width:80%;height:auto}
+  .tile img.stacked{width:44%;height:auto}
+  .tile img.mark{width:58%;height:auto}
+  .tile figcaption{
+    display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+    padding-top:14px;
+  }
+  .tile figcaption .name{font-family:var(--font-display);font-weight:600;font-size:21px}
+  .tile figcaption .fmt{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap}
+  .tile .idx{
+    font-size:12px;font-weight:500;letter-spacing:.1em;color:var(--brown);
+    display:block;margin-bottom:2px;
+  }
+  .tile .dl-btn,.file-dl{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--brown);background:transparent;border:1px solid var(--hairline-strong);
+    padding:8px 14px;cursor:pointer;transition:all .2s ease;
+    font-family:var(--font-body);
+  }
+  .tile .dl-btn:hover,.file-dl:hover{
+    background:var(--brown);border-color:var(--brown);color:var(--cream);
+  }
+  .tile .dl-btn svg,.file-dl svg{width:13px;height:13px;flex:none}
+  .tile .dl-btn[disabled],.file-dl[disabled]{opacity:.5;cursor:wait}
+  .tile figcaption{align-items:center}
+
+  /* ---------- anatomy ---------- */
+  .anatomy-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(40px,6vw,80px);margin-top:56px;align-items:start}
+  .craft-list{display:flex;flex-direction:column;gap:34px}
+  .craft-item{border-top:1px solid var(--hairline);padding-top:20px}
+  .craft-item .no{font-size:12px;font-weight:500;letter-spacing:.18em;color:var(--brown)}
+  .craft-item h3{font-family:var(--font-display);font-weight:600;font-size:24px;margin:8px 0 10px}
+  .craft-item p{color:var(--ink-soft);font-size:16px;text-wrap:pretty}
+  .figure-stack{display:flex;flex-direction:column;gap:44px}
+  .figure{border:1px solid var(--hairline);background:var(--paper);padding:clamp(22px,3.4vw,44px)}
+  .figure .art{position:relative;max-width:340px;margin:0 auto}
+  .figure .art.wide{max-width:440px}
+  .dot{
+    position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);
+    width:26px;height:26px;border-radius:50%;
+    background:var(--brown);color:var(--cream);
+    font-size:12px;font-weight:500;line-height:26px;text-align:center;
+    box-shadow:0 0 0 5px rgba(245,241,232,.9);
+  }
+  .legend{list-style:none;margin-top:26px;display:flex;flex-direction:column;gap:8px}
+  .legend li{display:flex;gap:12px;align-items:baseline;font-size:14px;color:var(--ink-soft)}
+  .legend .no{
+    flex:none;width:20px;height:20px;border-radius:50%;transform:translateY(3px);
+    background:var(--brown);color:var(--cream);
+    font-size:11px;font-weight:500;line-height:20px;text-align:center;
+  }
+  .legend b{font-weight:500;color:var(--ink)}
+
+  /* ---------- typography guide ---------- */
+  .type-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:52px}
+  .type-card{border:1px solid var(--hairline);background:var(--paper)}
+  .type-spec{
+    min-height:150px;display:grid;place-items:center;padding:30px;
+    border-bottom:1px solid var(--hairline);overflow:hidden;
+  }
+  .type-spec .aa-cormorant{font-family:var(--font-display-latin);font-weight:600;font-size:76px;line-height:1}
+  .type-spec .aa-jost{font-family:"Jost","Avenir Next",sans-serif;font-weight:500;font-size:64px;line-height:1}
+  .type-spec .aa-doran{font-family:'Doran','Vazirmatn',Tahoma,sans-serif;font-weight:700;font-size:54px;line-height:1.6}
+  .type-spec .aa-nian{font-family:'Nian','Vazirmatn',Tahoma,sans-serif;font-weight:400;font-size:50px;line-height:1.6}
+  .type-info{padding:18px 22px 22px}
+  .type-info .t-name{font-size:24px;color:var(--ink);margin:0}
+  .t-name-cormorant{font-family:var(--font-display-latin);font-weight:600}
+  .t-name-jost{font-family:"Jost","Avenir Next",sans-serif;font-weight:500}
+  .t-name-doran{font-family:'Doran','Vazirmatn',Tahoma,sans-serif;font-weight:700}
+  .t-name-nian{font-family:'Nian','Vazirmatn',Tahoma,sans-serif;font-weight:700}
+  .t-role{margin-top:6px;font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--brown)}
+  .t-alpha{margin-top:14px;font-size:14px;line-height:1.75;color:var(--ink-soft)}
+  .t-alpha-latin{font-family:"Jost","Avenir Next",sans-serif;font-weight:400}
+  .t-alpha-fa-doran{font-family:'Doran','Vazirmatn',Tahoma,sans-serif;font-size:15px}
+  .t-alpha-fa-nian{font-family:'Nian','Vazirmatn',Tahoma,sans-serif;font-size:15px}
+  .t-weights{margin-top:14px;padding-top:12px;border-top:1px solid var(--hairline);font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+
+  /* ---------- palette ---------- */
+  .palette{background:var(--paper)}
+  .swatch-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:52px}
+  .swatch{border:1px solid var(--hairline);background:var(--paper)}
+  .swatch-btn{
+    display:block;width:100%;aspect-ratio:5/4;border:0;cursor:pointer;
+    text-align:start;padding:18px;position:relative;
+    font-family:var(--font-body);
+    transition:box-shadow .2s ease;
+  }
+  .swatch-btn:hover{box-shadow:inset 0 0 0 2px currentColor}
+  .swatch-btn .sw-name{font-family:var(--font-display);font-weight:600;font-size:22px;line-height:1.2;display:block}
+  .swatch-btn .sw-hex{display:block;margin-top:6px;font-size:14px;font-weight:500;letter-spacing:.08em;direction:ltr;unicode-bidi:isolate}
+  .swatch-btn .sw-copy{
+    position:absolute;top:14px;inset-inline-end:14px;
+    font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+    opacity:0;transition:opacity .2s ease;
+  }
+  .swatch-btn:hover .sw-copy,.swatch-btn:focus-visible .sw-copy{opacity:.75}
+  .sw-body{padding:16px 18px 18px;border-top:1px solid var(--hairline)}
+  .sw-row{display:flex;justify-content:space-between;gap:12px;font-size:13px}
+  .sw-row+.sw-row{margin-top:6px}
+  .sw-row span{font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);padding-top:2px}
+  .sw-row b{font-weight:400;font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+  .sw-role{margin-top:12px;font-size:13.5px;color:var(--ink-soft)}
+  .fill-taupe{background:var(--taupe);color:var(--ink)}
+  .fill-brown{background:var(--brown);color:var(--cream)}
+  .fill-ink{background:var(--ink);color:var(--cream)}
+  .fill-paper{background:var(--paper);color:var(--ink)}
+
+  .balance{margin-top:64px}
+  .balance-label{font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:12px}
+  .balance-bar{display:flex;height:58px;border:1px solid var(--hairline-strong)}
+  .balance-bar div{display:flex;align-items:center;padding:0 14px;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;overflow:hidden}
+  .seg-paper{width:58%;background:var(--paper);color:var(--ink)}
+  .seg-taupe{width:24%;background:var(--taupe);color:var(--ink)}
+  .seg-brown{width:12%;background:var(--brown);color:var(--cream)}
+  .seg-ink{width:6%;background:var(--ink);color:var(--cream);padding:0 8px!important}
+
+  .pairings{margin-top:56px}
+  .pairing-row{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:12px}
+  .pair{
+    height:76px;display:flex;align-items:center;justify-content:center;gap:14px;
+    border:1px solid var(--hairline);
+  }
+  .pair .aa{font-family:var(--font-display);font-weight:600;font-size:30px;line-height:1}
+  .pair .pl{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+  .pair-coffee{background:var(--brown);color:var(--cream)}
+  .pair-bronze{background:var(--taupe);color:var(--ink)}
+  .pair-paper{background:var(--paper);color:var(--brown)}
+  .palette-foot{
+    margin-top:48px;padding-top:20px;border-top:1px solid var(--hairline);
+    font-size:14px;color:var(--ink-soft);max-width:72ch;text-wrap:pretty;
+  }
+
+  /* ---------- usage ---------- */
+  #usage{background:var(--paper-soft)}
+  .usage-lead{max-width:62ch;color:var(--ink-soft);margin-top:14px;text-wrap:pretty}
+  .usage-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(36px,5vw,64px);margin-top:56px;align-items:stretch}
+  .usage-block h3{font-family:var(--font-display);font-weight:600;font-size:24px;margin-bottom:16px}
+  .clearspace{
+    border:1px dashed var(--hairline-strong);position:relative;
+    padding:12.5%;display:grid;place-items:center;
+  }
+  .clearspace img{width:50%;height:auto}
+  .cs-x{
+    position:absolute;font-size:12px;font-weight:500;color:var(--ink-soft);
+    background:var(--paper);padding:0 6px;
+  }
+  .cs-x.t{top:-9px;left:50%;transform:translateX(-50%)}
+  .cs-x.b{bottom:-9px;left:50%;transform:translateX(-50%)}
+  .cs-x.l{left:-11px;top:50%;transform:translateY(-50%) rotate(-90deg)}
+  .cs-x.r{right:-11px;top:50%;transform:translateY(-50%) rotate(90deg)}
+  .usage-note{margin-top:16px;font-size:14px;color:var(--ink-soft)}
+  .minsize{display:flex;flex-direction:column;gap:26px}
+  .ms-row{display:flex;align-items:flex-end;gap:20px;border-bottom:1px solid var(--hairline);padding-bottom:18px}
+  .ms-row img{flex:none}
+  .ms-row .ms-emblem{height:24px;width:auto}
+  .ms-row .ms-lockup{width:120px;height:auto}
+  .ms-label b{display:block;font-weight:500;font-size:15px}
+  .ms-label span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+
+  .donts{margin-top:72px}
+  .donts-head{display:flex;align-items:baseline;gap:18px;margin-bottom:26px}
+  .donts-head h3{font-family:var(--font-display);font-weight:600;font-size:24px}
+  .donts-head p{font-size:14px;color:var(--ink-soft)}
+  .dont-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .dont .d-canvas{
+    aspect-ratio:4/3;border:1px solid var(--hairline);background:var(--paper);
+    display:grid;place-items:center;overflow:hidden;position:relative;
+  }
+  .dont .d-canvas img{width:38%;height:auto}
+  .dont .d-canvas img.d-stretch{transform:scaleX(1.45);width:30%}
+  .dont .d-canvas img.d-rotate{transform:rotate(-9deg)}
+  .dont .d-canvas img.d-recolor{filter:sepia(1) saturate(3.2) hue-rotate(150deg)}
+  .dont .d-canvas.quiet{background:var(--taupe)}
+  .dont .d-canvas.quiet img{width:42%}
+  .d-x{
+    position:absolute;top:12px;inset-inline-end:12px;width:22px;height:22px;
+    background:var(--brown);color:var(--cream);
+    font-size:11px;line-height:22px;text-align:center;font-weight:500;
+  }
+  .dont figcaption{margin-top:12px;font-size:14px;color:var(--ink-soft)}
+  .dont figcaption b{font-weight:500;color:var(--ink)}
+
+  /* ---------- files ---------- */
+  .files{background:var(--brown);color:var(--cream)}
+  .files h2{color:var(--cream)}
+  .files-table{margin-top:52px;border-top:1px solid var(--hairline-cream)}
+  .file-row{
+    display:grid;grid-template-columns:1.3fr 1.6fr auto;gap:24px;align-items:baseline;
+    padding:20px 0;border-bottom:1px solid var(--hairline-cream);
+    transition:background .2s ease;
+  }
+  .file-row:hover{background:rgba(245,241,232,.05)}
+  .file-name{font-family:var(--font-display);font-weight:500;font-size:20px;word-break:break-all;direction:ltr;unicode-bidi:isolate}
+  .file-desc{font-size:14.5px;color:rgba(245,241,232,.78)}
+  .file-tag{
+    font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+    border:1px solid var(--hairline-cream);padding:5px 12px;white-space:nowrap;
+  }
+  .file-row .file-dl{
+    color:var(--cream);border-color:var(--hairline-cream);
+  }
+  .file-row .file-dl:hover{background:var(--cream);border-color:var(--cream);color:var(--brown)}
+  .files-note{margin-top:26px;font-size:14px;color:rgba(245,241,232,.72);max-width:70ch;text-wrap:pretty}
+
+  /* ---------- footer ---------- */
+  .site-footer{background:var(--ink);color:rgba(245,241,232,.85);padding:30px 0}
+  .site-footer .container{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .site-footer p{font-size:13px;letter-spacing:.06em}
+  .site-footer a{
+    font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+    color:rgba(245,241,232,.75);transition:color .2s ease;
+  }
+  .site-footer a:hover{color:var(--cream)}
+
+  /* ---------- toast ---------- */
+  .toast{
+    position:fixed;left:50%;bottom:28px;transform:translate(-50%,10px);
+    background:var(--ink);color:var(--cream);
+    font-size:13px;font-weight:400;letter-spacing:.05em;
+    padding:11px 20px;opacity:0;pointer-events:none;
+    transition:opacity .25s ease,transform .25s ease;z-index:80;
+  }
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+
+  /* ---------- persian / rtl ---------- */
+  body.fa{
+    --font-display:"Doran","Vazirmatn",Tahoma,sans-serif;
+    --font-body:"Nian","Vazirmatn",Tahoma,sans-serif;
+    font-weight:400;
+    line-height:1.9;
+  }
+  body.fa *{letter-spacing:0!important}
+  body.fa h2{line-height:1.4}
+  body.fa h2,body.fa h3,body.fa .stat b,body.fa .swatch-btn .sw-name,body.fa .tile figcaption .name{font-weight:700}
+  body.fa .lead,body.fa .cover-sub{font-weight:700}
+  body.fa .lead{line-height:1.85}
+  body.fa .cover-sub{font-style:normal}
+  body.fa .kicker,body.fa .cover-kicker,body.fa .cover-meta,body.fa .stat span,body.fa .nav-links a,body.fa .tile figcaption .fmt,body.fa .sw-copy,body.fa .balance-label,body.fa .pair .pl,body.fa .ms-label b,body.fa .ms-label span,body.fa .file-tag,body.fa .t-role,body.fa .t-weights,body.fa b{font-weight:700}
+  body.fa .file-name{font-family:var(--font-display-latin)}
+  body.fa .pair .aa{font-family:var(--font-display-latin)}
+  html[dir="rtl"] .sw-hex{text-align:right}
+  html[dir="rtl"] .file-name{text-align:right}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:1080px){
+    .swatch-grid{grid-template-columns:repeat(2,1fr)}
+    .dont-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:980px){
+    .overview-grid,.anatomy-grid,.usage-grid{grid-template-columns:1fr}
+    .figure-stack{order:2}
+  }
+  @media (max-width:820px){
+    .nav-links{display:none}
+  }
+  @media (max-width:760px){
+    .suite-grid,.type-grid{grid-template-columns:1fr}
+    .pairing-row{grid-template-columns:1fr}
+    .file-row{grid-template-columns:1fr auto;row-gap:6px}
+    .file-desc{grid-column:1/-1}
+    .cover-meta{flex-direction:column;gap:8px;align-items:center;text-align:center}
+  }
+  @media (max-width:600px){
+    .swatch-grid,.dont-grid{grid-template-columns:1fr}
+    .stats{flex-wrap:wrap;gap:24px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="top-nav" id="top-nav" data-od-id="top-nav" aria-label="Sections" data-i18n-aria="nav-aria">
+  <div class="container">
+    <a class="brand" href="#cover" aria-label="Rostamian — back to top" data-i18n-aria="brand-aria">
+      <img src="assets/rostamian-logo-emblem.svg" alt="" width="25" height="30" data-od-id="nav-emblem">
+    </a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#overview" data-i18n="nav-overview">Overview</a>
+        <a href="#suite" data-i18n="nav-suite">Logo Suite</a>
+        <a href="#anatomy" data-i18n="nav-anatomy">Anatomy</a>
+        <a href="#typography" data-i18n="nav-type">Type</a>
+        <a href="#palette" data-i18n="nav-color">Color</a>
+        <a href="#usage" data-i18n="nav-usage">Usage</a>
+        <a href="#files" data-i18n="nav-files">Files</a>
+      </div>
+      <span class="lang-select-wrap">
+        <select class="lang-select" id="lang-select" aria-label="Language" data-od-id="lang-select" data-i18n-aria="lang-aria">
+          <option value="en" selected>English</option>
+          <option value="fa">فارسی</option>
+        </select>
+      </span>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============ COVER ============ -->
+  <section class="cover" id="cover" data-od-id="cover-hero">
+    <div class="cover-mat" aria-hidden="true"></div>
+    <div class="cover-inner">
+      <p class="cover-kicker" data-i18n="cover-kicker">Brand Identity · Logo Presentation</p>
+      <h1 class="cover-lockup" data-od-id="cover-lockup">
+        <img src="assets/rostamian-logo-horizontal.svg"
+             alt="Rostamian — the Persian calligraphic brand title above the custom Latin lettering"
+             width="337" height="164" data-i18n-alt="cover-lockup-alt">
+      </h1>
+      <p class="cover-sub" data-i18n="cover-sub">The Persian title, the Latin lettering, and the palette behind the identity.</p>
+    </div>
+    <div class="cover-meta" data-od-id="cover-meta">
+      <span data-i18n="cover-meta-1">Prepared for Rostamian</span>
+      <span data-i18n="cover-meta-2">Identity Design — 2026</span>
+    </div>
+  </section>
+
+  <!-- ============ OVERVIEW ============ -->
+  <section id="overview" data-od-id="overview-section">
+    <div class="container overview-grid">
+      <div class="reveal">
+        <p class="kicker" data-i18n="ov-kicker">01 — Overview</p>
+        <h2 data-i18n="ov-h2">An identity rooted in Persian craft.</h2>
+        <div class="stats" data-od-id="overview-stats">
+          <div class="stat"><b data-i18n="stat-1">3</b><span data-i18n="stat-1l">Logo versions</span></div>
+          <div class="stat"><b data-i18n="stat-2">4</b><span data-i18n="stat-2l">Core colors</span></div>
+          <div class="stat"><b data-i18n="stat-3">1</b><span data-i18n="stat-3l">Master artwork</span></div>
+        </div>
+      </div>
+      <div class="overview-copy reveal">
+        <p class="lead" data-i18n="ov-lead">Rostamian is a family name with deep Persian roots, and the identity leans into that inheritance with restraint.</p>
+        <p data-i18n="ov-p2">The primary brand title is the Persian name, drawn by hand as calligraphy — its long baseline stroke sweeping beneath the letters. Beneath it, the Latin name is custom serif lettering set in a warm bronze tone, so the lockup reads as engraved stationery rather than a digital logo. Both titles are artwork; neither can ever be recreated with a font.</p>
+        <p data-i18n="ov-p3">Beside the titles stands the emblem: an illustrated scene inside a Persian arch, drawn for this mark alone. The system is deliberately compact — four colors, three logo versions, one master file — so it stays consistent wherever it lands.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOGO SUITE ============ -->
+  <section class="suite" id="suite" data-od-id="suite-section">
+    <div class="container">
+      <div class="reveal">
+        <p class="kicker" data-i18n="su-kicker">02 — The Logo Suite</p>
+        <h2 data-i18n="su-h2">Four ways the mark appears.</h2>
+        <p class="section-note" data-i18n="su-note">Each version has a job. The horizontal lockup leads on print and letterheads, the stacked lockup anchors covers and signage, and the single-color emblem takes over when space, size, or contrast demand it.</p>
+      </div>
+      <div class="suite-grid">
+        <figure class="tile reveal" data-od-id="tile-primary-lockup">
+          <div class="canvas">
+            <img class="h-lockup" src="assets/rostamian-logo-horizontal.svg"
+                 alt="Rostamian primary lockup — Persian calligraphic title with Latin lettering" width="337" height="164" data-i18n-alt="t1-alt">
+          </div>
+          <figcaption>
+            <div><span class="idx" data-i18n="t1-idx">01</span><span class="name" data-i18n="t1-name">Primary Lockup</span></div>
+            <span class="fmt" data-i18n="t1-fmt">Persian + Latin · Full Color</span>
+            <button class="dl-btn" type="button" data-src="assets/rostamian-logo-horizontal.svg" data-name="rostamian-logo-horizontal.png" data-w="1348" data-h="656"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-i18n="dl">PNG</span></button>
+          </figcaption>
+        </figure>
+        <figure class="tile reveal" data-od-id="tile-stacked-lockup">
+          <div class="canvas">
+            <img class="stacked" src="assets/rostamian-logo-stacked.svg"
+                 alt="Rostamian stacked lockup — emblem above the Latin lettering" width="276" height="440" data-i18n-alt="t2-alt">
+          </div>
+          <figcaption>
+            <div><span class="idx" data-i18n="t2-idx">02</span><span class="name" data-i18n="t2-name">Stacked Lockup</span></div>
+            <span class="fmt" data-i18n="t2-fmt">Emblem + Latin Title · Full Color</span>
+            <button class="dl-btn" type="button" data-src="assets/rostamian-logo-stacked.svg" data-name="rostamian-logo-stacked.png" data-w="828" data-h="1320"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-i18n="dl">PNG</span></button>
+          </figcaption>
+        </figure>
+        <figure class="tile reveal" data-od-id="tile-emblem-positive">
+          <div class="canvas">
+            <img class="mark" src="assets/rostamian-logo-emblem.svg"
+                 alt="Rostamian emblem in single-color black" width="276" height="331" data-i18n-alt="t3-alt">
+          </div>
+          <figcaption>
+            <div><span class="idx" data-i18n="t3-idx">03</span><span class="name" data-i18n="t3-name">Emblem</span></div>
+            <span class="fmt" data-i18n="t3-fmt">Mark Only · Single Color</span>
+            <button class="dl-btn" type="button" data-src="assets/rostamian-logo-emblem.svg" data-name="rostamian-logo-emblem.png" data-w="828" data-h="993"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-i18n="dl">PNG</span></button>
+          </figcaption>
+        </figure>
+        <figure class="tile reveal" data-od-id="tile-emblem-reversed">
+          <div class="canvas deep">
+            <img class="mark" src="assets/rostamian-logo-emblem-cream.svg"
+                 alt="Rostamian emblem reversed in cream on coffee brown" width="276" height="331" data-i18n-alt="t4-alt">
+          </div>
+          <figcaption>
+            <div><span class="idx" data-i18n="t4-idx">04</span><span class="name" data-i18n="t4-name">Emblem, Reversed</span></div>
+            <span class="fmt" data-i18n="t4-fmt">Deep Fields · Single Color</span>
+            <button class="dl-btn" type="button" data-src="assets/rostamian-logo-emblem-cream.svg" data-name="rostamian-logo-emblem-cream.png" data-w="828" data-h="993"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-i18n="dl">PNG</span></button>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ANATOMY ============ -->
+  <section id="anatomy" data-od-id="anatomy-section">
+    <div class="container">
+      <div class="reveal">
+        <p class="kicker" data-i18n="an-kicker">03 — Anatomy</p>
+        <h2 data-i18n="an-h2">Built from three craft elements.</h2>
+      </div>
+      <div class="anatomy-grid">
+        <div class="craft-list">
+          <div class="craft-item reveal" data-od-id="craft-arch">
+            <span class="no">I</span>
+            <h3 data-i18n="cr1-h">The arch</h3>
+            <p data-i18n="cr1-p">The emblem is framed by a Persian arch — the iwan silhouette. It gives the mark architecture and dignity, and it keeps the illustration contained and legible at every size.</p>
+          </div>
+          <div class="craft-item reveal" data-od-id="craft-illustration">
+            <span class="no">II</span>
+            <h3 data-i18n="cr2-h">The illustration</h3>
+            <p data-i18n="cr2-p">Inside the arch, a miniature-style scene is drawn by hand. It carries the character of the mark — detailed up close, reduced to a confident silhouette when small. That is exactly why the single-color emblem exists.</p>
+          </div>
+          <div class="craft-item reveal" data-od-id="craft-lettering">
+            <span class="no">III</span>
+            <h3 data-i18n="cr3-h">The two titles</h3>
+            <p data-i18n="cr3-p">The Persian title carries the brand: the name drawn as nastaliq-style calligraphy, its baseline extended into a long sweep. The Latin name sits beneath it as custom serif lettering in bronze. Both are drawn once, as artwork — neither may ever be recreated with a font.</p>
+          </div>
+        </div>
+        <div class="figure-stack">
+          <figure class="figure reveal" data-od-id="figure-emblem">
+            <div class="art">
+              <img src="assets/rostamian-logo-emblem.svg" alt="Annotated Rostamian emblem" width="276" height="331" data-i18n-alt="fig1-alt">
+              <span class="dot" style="--x:8%;--y:36%" aria-hidden="true">1</span>
+              <span class="dot" style="--x:52%;--y:48%" aria-hidden="true">2</span>
+            </div>
+            <ul class="legend">
+              <li><span class="no">1</span><span data-i18n="lg1a"><b>The arch</b> — the framing silhouette</span></li>
+              <li><span class="no">2</span><span data-i18n="lg1b"><b>The scene</b> — the illustrated center</span></li>
+            </ul>
+          </figure>
+          <figure class="figure reveal" data-od-id="figure-lockup">
+            <div class="art wide">
+              <img src="assets/rostamian-logo-horizontal.svg" alt="Annotated Rostamian horizontal lockup" width="337" height="164" data-i18n-alt="fig2-alt">
+              <span class="dot" style="--x:13%;--y:26%" aria-hidden="true">3</span>
+              <span class="dot" style="--x:30%;--y:86%" aria-hidden="true">4</span>
+            </div>
+            <ul class="legend">
+              <li><span class="no">3</span><span data-i18n="lg2a"><b>The Persian title</b> — custom calligraphy, the primary brand title</span></li>
+              <li><span class="no">4</span><span data-i18n="lg2b"><b>The Latin lettering</b> — custom serif wordmark</span></li>
+            </ul>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TYPOGRAPHY ============ -->
+  <section class="typography" id="typography" data-od-id="typography-section">
+    <div class="container">
+      <div class="reveal">
+        <p class="kicker" data-i18n="ty-kicker">05 — Typography</p>
+        <h2 data-i18n="ty-h2">Two scripts, two companion faces.</h2>
+        <p class="section-note" data-i18n="ty-note">The brand speaks in two scripts, each with its own pairing — a classical serif with a quiet grotesk for Latin, Doran with Nian for Persian. The brand titles themselves stay custom artwork; these faces serve the text around them.</p>
+      </div>
+      <div class="type-grid">
+        <div class="type-card reveal" data-od-id="type-card-cormorant">
+          <div class="type-spec"><span class="aa-cormorant">Aa</span></div>
+          <div class="type-info">
+            <h3 class="t-name t-name-cormorant">Cormorant Garamond</h3>
+            <p class="t-role" data-i18n="ty-r1">Latin display — headings and large lines.</p>
+            <p class="t-alpha t-alpha-latin" dir="ltr">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</p>
+            <p class="t-weights" data-i18n="ty-w1">Weights used — 500 · 600</p>
+          </div>
+        </div>
+        <div class="type-card reveal" data-od-id="type-card-jost">
+          <div class="type-spec"><span class="aa-jost">Aa</span></div>
+          <div class="type-info">
+            <h3 class="t-name t-name-jost">Jost</h3>
+            <p class="t-role" data-i18n="ty-r2">Latin body &amp; labels — copy, notes, and captions.</p>
+            <p class="t-alpha t-alpha-latin" dir="ltr">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</p>
+            <p class="t-weights" data-i18n="ty-w2">Weights used — 300 · 400 · 500</p>
+          </div>
+        </div>
+        <div class="type-card reveal" data-od-id="type-card-doran">
+          <div class="type-spec"><span class="aa-doran" dir="rtl" lang="fa">رستمیان</span></div>
+          <div class="type-info">
+            <h3 class="t-name t-name-doran">Doran</h3>
+            <p class="t-role" data-i18n="ty-r3">Persian titles — headings in Doran.</p>
+            <p class="t-alpha t-alpha-fa-doran" dir="rtl" lang="fa">آ ا ب پ ت ث ج چ ح خ د ذ ر ز ژ س ش ص ض ط ظ ع غ ف ق ک گ ل م ن و ه ی ۰۱۲۳۴۵۶۷۸۹</p>
+            <p class="t-weights" data-i18n="ty-w3">Weights used — 700</p>
+          </div>
+        </div>
+        <div class="type-card reveal" data-od-id="type-card-nian">
+          <div class="type-spec"><span class="aa-nian" dir="rtl" lang="fa">رستمیان</span></div>
+          <div class="type-info">
+            <h3 class="t-name t-name-nian">Nian</h3>
+            <p class="t-role" data-i18n="ty-r4">Persian body &amp; subtitles — copy and labels in Nian.</p>
+            <p class="t-alpha t-alpha-fa-nian" dir="rtl" lang="fa">آ ا ب پ ت ث ج چ ح خ د ذ ر ز ژ س ش ص ض ط ظ ع غ ف ق ک گ ل م ن و ه ی ۰۱۲۳۴۵۶۷۸۹</p>
+            <p class="t-weights" data-i18n="ty-w4">Weights used — 400 · 700</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PALETTE ============ -->
+  <section class="palette" id="palette" data-od-id="palette-section">
+    <div class="container">
+      <div class="reveal">
+        <p class="kicker" data-i18n="pa-kicker">04 — Color</p>
+        <h2 data-i18n="pa-h2">The project palette.</h2>
+        <p class="section-note" data-i18n="pa-note">Four tones carry the whole system. Click any swatch to copy its HEX value.</p>
+      </div>
+      <div class="swatch-grid">
+        <div class="swatch reveal" data-od-id="swatch-bronze-taupe">
+          <button class="swatch-btn fill-taupe" type="button" data-hex="#9B8E6E" aria-label="Copy Bronze Taupe, hex 9 B 8 E 6 E" data-i18n-aria="sw1-aria">
+            <span class="sw-name" data-i18n="sw1-name">Bronze Taupe</span>
+            <span class="sw-hex">#9B8E6E</span>
+            <span class="sw-copy" data-i18n="copy">Copy</span>
+          </button>
+          <div class="sw-body">
+            <div class="sw-row"><span>RGB</span><b>155 · 142 · 110</b></div>
+            <div class="sw-row"><span>CMYK*</span><b>0 · 8 · 29 · 39</b></div>
+            <p class="sw-role" data-i18n="sw1-role">Wordmark tone, display accents, quiet fields.</p>
+          </div>
+        </div>
+        <div class="swatch reveal" data-od-id="swatch-coffee-brown">
+          <button class="swatch-btn fill-brown" type="button" data-hex="#603913" aria-label="Copy Coffee Brown, hex 6 0 3 9 1 3" data-i18n-aria="sw2-aria">
+            <span class="sw-name" data-i18n="sw2-name">Coffee Brown</span>
+            <span class="sw-hex">#603913</span>
+            <span class="sw-copy" data-i18n="copy">Copy</span>
+          </button>
+          <div class="sw-body">
+            <div class="sw-row"><span>RGB</span><b>96 · 57 · 19</b></div>
+            <div class="sw-row"><span>CMYK*</span><b>0 · 40 · 80 · 62</b></div>
+            <p class="sw-role" data-i18n="sw2-role">Emblem artwork, deep fields, small labels.</p>
+          </div>
+        </div>
+        <div class="swatch reveal" data-od-id="swatch-rich-black">
+          <button class="swatch-btn fill-ink" type="button" data-hex="#231F20" aria-label="Copy Rich Black, hex 2 3 1 F 2 0" data-i18n-aria="sw3-aria">
+            <span class="sw-name" data-i18n="sw3-name">Rich Black</span>
+            <span class="sw-hex">#231F20</span>
+            <span class="sw-copy" data-i18n="copy">Copy</span>
+          </button>
+          <div class="sw-body">
+            <div class="sw-row"><span>RGB</span><b>35 · 31 · 32</b></div>
+            <div class="sw-row"><span>CMYK*</span><b>0 · 11 · 9 · 86</b></div>
+            <p class="sw-role" data-i18n="sw3-role">Single-color emblem, text, hairline rules.</p>
+          </div>
+        </div>
+        <div class="swatch reveal" data-od-id="swatch-paper">
+          <button class="swatch-btn fill-paper" type="button" data-hex="#F5F1E8" aria-label="Copy Paper, hex F 5 F 1 E 8" data-i18n-aria="sw4-aria">
+            <span class="sw-name" data-i18n="sw4-name">Paper</span>
+            <span class="sw-hex">#F5F1E8</span>
+            <span class="sw-copy" data-i18n="copy">Copy</span>
+          </button>
+          <div class="sw-body">
+            <div class="sw-row"><span>RGB</span><b>245 · 241 · 232</b></div>
+            <div class="sw-row"><span>CMYK*</span><b>0 · 2 · 5 · 4</b></div>
+            <p class="sw-role" data-i18n="sw4-role">Backgrounds, reversed-mark fields, breathing room.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="balance reveal" data-od-id="proportion-bar">
+        <p class="balance-label" data-i18n="bal-label">Suggested balance in application</p>
+        <div class="balance-bar" role="img" aria-label="Color proportion: Paper 58 percent, Bronze Taupe 24 percent, Coffee Brown 12 percent, Rich Black 6 percent" data-i18n-aria="bal-aria">
+          <div class="seg-paper" data-i18n="seg1">Paper 58</div>
+          <div class="seg-taupe" data-i18n="seg2">Taupe 24</div>
+          <div class="seg-brown" data-i18n="seg3">Brown 12</div>
+          <div class="seg-ink" data-i18n="seg4">6</div>
+        </div>
+      </div>
+
+      <div class="pairings reveal" data-od-id="pairing-chips">
+        <p class="balance-label" data-i18n="pair-label">Approved pairings</p>
+        <div class="pairing-row">
+          <div class="pair pair-coffee"><span class="aa">Aa</span><span class="pl" data-i18n="pair1">Cream on Coffee</span></div>
+          <div class="pair pair-bronze"><span class="aa">Aa</span><span class="pl" data-i18n="pair2">Ink on Bronze</span></div>
+          <div class="pair pair-paper"><span class="aa">Aa</span><span class="pl" data-i18n="pair3">Coffee on Paper</span></div>
+        </div>
+      </div>
+
+      <p class="palette-foot reveal" data-od-id="palette-footnote" data-i18n="pa-foot">*CMYK values are conversion approximations — confirm on press proofs. Pure white (#FFFFFF) appears only as knockout detail inside the stacked lockup; treat it as part of the illustration, not a standalone field color.</p>
+    </div>
+  </section>
+
+  <!-- ============ USAGE ============ -->
+  <section id="usage" data-od-id="usage-section">
+    <div class="container">
+      <div class="reveal">
+        <p class="kicker" data-i18n="us-kicker">06 — Usage</p>
+        <h2 data-i18n="us-h2">Keeping the mark sharp.</h2>
+        <p class="usage-lead" data-i18n="us-lead">The mark survives contact with the real world through three habits — generous clear space, honest scaling, and switching to the single-color emblem when color or contrast runs out. Do use the reversed emblem on deep fields, and always scale from the master files.</p>
+      </div>
+      <div class="usage-grid">
+        <div class="usage-block reveal" data-od-id="clearspace-figure">
+          <h3 data-i18n="cs-h">Clear space</h3>
+          <div class="clearspace">
+            <span class="cs-x t">x</span><span class="cs-x b">x</span>
+            <span class="cs-x l">x</span><span class="cs-x r">x</span>
+            <img src="assets/rostamian-logo-emblem.svg" alt="Emblem shown inside its clear space margin" width="276" height="331" data-i18n-alt="cs-alt">
+          </div>
+          <p class="usage-note" data-i18n="cs-note">Keep a margin of at least <b>x</b> — one quarter of the emblem's width — free of type, rules, or other artwork on every side.</p>
+        </div>
+        <div class="usage-block reveal" data-od-id="minsize-figure">
+          <h3 data-i18n="ms-h">Minimum sizes</h3>
+          <div class="minsize">
+            <div class="ms-row">
+              <img class="ms-emblem" src="assets/rostamian-logo-emblem.svg" alt="Emblem at minimum 24 pixel size" width="24" height="29" data-i18n-alt="ms1-alt">
+              <div class="ms-label"><b data-i18n="ms1-b">Emblem</b><span data-i18n="ms1-s">24 px minimum</span></div>
+            </div>
+            <div class="ms-row">
+              <img class="ms-lockup" src="assets/rostamian-logo-horizontal.svg" alt="Primary lockup at minimum 120 pixel width" width="120" height="59" data-i18n-alt="ms2-alt">
+              <div class="ms-label"><b data-i18n="ms2-b">Primary lockup</b><span data-i18n="ms2-s">120 px minimum</span></div>
+            </div>
+          </div>
+          <p class="usage-note" data-i18n="ms-note">Below these sizes the illustration closes up — switch to the emblem alone, or enlarge the placement.</p>
+        </div>
+      </div>
+
+      <div class="donts reveal" data-od-id="dont-grid">
+        <div class="donts-head">
+          <h3 data-i18n="dt-h">What to avoid</h3>
+          <p data-i18n="dt-sub">The mark is drawn — these treatments break the drawing.</p>
+        </div>
+        <div class="dont-grid">
+          <figure class="dont" data-od-id="dont-stretch">
+            <div class="d-canvas">
+              <span class="d-x" aria-hidden="true">✕</span>
+              <img class="d-stretch" src="assets/rostamian-logo-emblem.svg" alt="Emblem incorrectly stretched horizontally" width="276" height="331" data-i18n-alt="d1-alt">
+            </div>
+            <figcaption data-i18n="dt1"><b>Don't stretch</b> or condense the proportions.</figcaption>
+          </figure>
+          <figure class="dont" data-od-id="dont-rotate">
+            <div class="d-canvas">
+              <span class="d-x" aria-hidden="true">✕</span>
+              <img class="d-rotate" src="assets/rostamian-logo-emblem.svg" alt="Emblem incorrectly rotated" width="276" height="331" data-i18n-alt="d2-alt">
+            </div>
+            <figcaption data-i18n="dt2"><b>Don't rotate</b> the mark off its axis.</figcaption>
+          </figure>
+          <figure class="dont" data-od-id="dont-recolor">
+            <div class="d-canvas">
+              <span class="d-x" aria-hidden="true">✕</span>
+              <img class="d-recolor" src="assets/rostamian-logo-emblem.svg" alt="Emblem incorrectly recolored outside the palette" width="276" height="331" data-i18n-alt="d3-alt">
+            </div>
+            <figcaption data-i18n="dt3"><b>Don't recolor</b> outside the project palette.</figcaption>
+          </figure>
+          <figure class="dont" data-od-id="dont-contrast">
+            <div class="d-canvas quiet">
+              <span class="d-x" aria-hidden="true">✕</span>
+              <img src="assets/rostamian-logo-emblem-cream.svg" alt="Cream emblem on a low-contrast taupe field" width="276" height="331" data-i18n-alt="d4-alt">
+            </div>
+            <figcaption data-i18n="dt4"><b>Don't lose contrast</b> on quiet fields.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FILES ============ -->
+  <section class="files on-dark" id="files" data-od-id="files-section">
+    <div class="container">
+      <div class="reveal">
+        <p class="kicker" data-i18n="fl-kicker">07 — Files</p>
+        <h2 data-i18n="fl-h2">What's delivered.</h2>
+      </div>
+      <div class="files-table reveal" data-od-id="files-table">
+        <div class="file-row">
+          <span class="file-name">rostamian-logo-horizontal.svg</span>
+          <span class="file-desc" data-i18n="f1">Primary bilingual lockup — Persian calligraphic title above the Latin lettering, full color.</span>
+          <span class="file-tag">SVG</span>
+          <a class="file-dl" href="assets/rostamian-logo-horizontal.svg" download="rostamian-logo-horizontal.svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-i18n="dl-file">Download</span></a>
+        </div>
+        <div class="file-row">
+          <span class="file-name">rostamian-logo-stacked.svg</span>
+          <span class="file-desc" data-i18n="f2">Stacked emblem + Latin lettering — full color, for covers and signage.</span>
+          <span class="file-tag">SVG</span>
+          <a class="file-dl" href="assets/rostamian-logo-stacked.svg" download="rostamian-logo-stacked.svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-i18n="dl-file">Download</span></a>
+        </div>
+        <div class="file-row">
+          <span class="file-name">rostamian-logo-emblem.svg</span>
+          <span class="file-desc" data-i18n="f3">Emblem alone — single color (positive), the compact version of the mark.</span>
+          <span class="file-tag">SVG</span>
+          <a class="file-dl" href="assets/rostamian-logo-emblem.svg" download="rostamian-logo-emblem.svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-i18n="dl-file">Download</span></a>
+        </div>
+        <div class="file-row">
+          <span class="file-name">rostamian-logo-emblem-cream.svg</span>
+          <span class="file-desc" data-i18n="f4">Emblem reversed in cream — for deep coffee-brown and dark fields.</span>
+          <span class="file-tag">SVG</span>
+          <a class="file-dl" href="assets/rostamian-logo-emblem-cream.svg" download="rostamian-logo-emblem-cream.svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-i18n="dl-file">Download</span></a>
+        </div>
+        <div class="file-row">
+          <span class="file-name">Rostamian-END.ai</span>
+          <span class="file-desc" data-i18n="f5">Master artwork — the editable Adobe Illustrator source for all versions.</span>
+          <span class="file-tag">AI</span>
+          <a class="file-dl" href="assets/Rostamian-END.ai" download="Rostamian-END.ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-i18n="dl-file">Download</span></a>
+        </div>
+      </div>
+      <p class="files-note reveal" data-od-id="files-note" data-i18n="fl-note">Vector files are production-ready as delivered. For print, convert with the CMYK values in the palette section and outline the artwork from the master file before sending to press.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" data-od-id="site-footer">
+  <div class="container">
+    <p data-i18n="ft-copy">Brand Identity Presentation — 2026</p>
+    <a href="#cover" data-i18n="ft-top">Back to top</a>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+  (function(){
+    var nav = document.getElementById('top-nav');
+    var onScroll = function(){ nav.classList.toggle('scrolled', window.scrollY > 40); };
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+
+    var revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, {threshold:.15, rootMargin:'0px 0px -40px 0px'});
+      revealEls.forEach(function(el){ io.observe(el); });
+    } else {
+      revealEls.forEach(function(el){ el.classList.add('in'); });
+    }
+
+    /* ---------- persian dictionary ---------- */
+    var dict = {
+      'doc-title':'رستمیان — ارائه نشان و هویت بصری',
+      'nav-aria':'بخش‌ها',
+      'lang-aria':'زبان',
+      'brand-aria':'رستمیان — بازگشت به بالا',
+      'nav-overview':'مرور',
+      'nav-suite':'نسخه‌های نشان',
+      'nav-anatomy':'کالبد نشان',
+      'nav-color':'رنگ‌ها',
+      'nav-usage':'کاربرد',
+      'nav-files':'فایل‌ها',
+      'cover-kicker':'هویت بصری · ارائه نشان',
+      'cover-sub':'عنوان فارسی، حروف‌نگاری لاتین، و پالت رنگی پشت این هویت.',
+      'cover-meta-1':'تهیه‌شده برای رستمیان',
+      'cover-meta-2':'طراحی هویت — ۲۰۲۶',
+      'cover-lockup-alt':'رستمیان — عنوان خوشنویسی فارسی بالای حروف‌نگاری سفارشی لاتین',
+      'ov-kicker':'۰۱ — مرور',
+      'ov-h2':'هویتی ریشه‌دار در هنر ایران.',
+      'stat-1':'۳','stat-1l':'نسخه نشان',
+      'stat-2':'۴','stat-2l':'رنگ اصلی',
+      'stat-3':'۱','stat-3l':'فایل مادر',
+      'ov-lead':'رستمیان نامی خانوادگی با ریشه‌های عمیق ایرانی است و این هویت، با خویشتن‌داری به همان میراث تکیه می‌کند.',
+      'ov-p2':'عنوان اصلی برند، نام فارسی است که به‌صورت خوشنویسیِ دستی کشیده شده است — خط پایه‌ی کشیده‌اش زیر حروف جاریست. زیر آن، نام لاتین با حروف‌نگاریِ سفارشیِ سریف به رنگ برنزِ گرم نشسته است؛ ترکیبی که بیشتر به اَستانسیوی حکاکی‌شده می‌ماند تا لوگوی دیجیتال. هر دو عنوان اثرِ هنری‌اند و هرگز نمی‌توان آن‌ها را با فونت بازسازی کرد.',
+      'ov-p3':'در کنار عنوان‌ها، نشانِ تصویری ایستاده است: صحنه‌ای مصور درون قوسِ ایرانی که تنها برای همین نشان کشیده شده است. این سیستم عامدانه جمع‌وجور است — چهار رنگ، سه نسخه نشان، یک فایل مادر — تا هر جا می‌نشیند، یکدست بماند.',
+      'su-kicker':'۰۲ — نسخه‌های نشان',
+      'su-h2':'چهار گونه برای حضور نشان.',
+      'su-note':'هر نسخه کاری دارد. ترکیب افقی روی چاپ و سربرگ پیشتاز است، ترکیب عمودی جلد و تابلو را مهار می‌کند، و نشانِ تک‌رنگ هر جا که فضا، اندازه یا کنتراست اقتضا کند، وارد می‌شود.',
+      't1-idx':'۰۱','t1-name':'ترکیب اصلی','t1-fmt':'فارسی + لاتین · تمام‌رنگ',
+      't1-alt':'ترکیب اصلی رستمیان — عنوان خوشنویسی فارسی با حروف‌نگاری لاتین',
+      't2-idx':'۰۲','t2-name':'ترکیب عمودی','t2-fmt':'نشان تصویری + عنوان لاتین · تمام‌رنگ',
+      't2-alt':'ترکیب عمودی رستمیان — نشان تصویری بالای حروف‌نگاری لاتین',
+      't3-idx':'۰۳','t3-name':'نشان تصویری','t3-fmt':'فقط نشان · تک‌رنگ',
+      't3-alt':'نشان تصویری رستمیان، تک‌رنگ مشکی',
+      't4-idx':'۰۴','t4-name':'نشان تصویری، معکوس','t4-fmt':'زمینه‌های تیره · تک‌رنگ',
+      't4-alt':'نشان تصویری رستمیان، معکوس به رنگ کرم روی قهوه‌ای تلخ',
+      'an-kicker':'۰۳ — کالبد نشان',
+      'an-h2':'ساخته‌شده از سه عنصرِ صنعتگری.',
+      'cr1-h':'قوس',
+      'cr1-p':'نشان تصویری در قابی از قوسِ ایرانی — نیم‌رخِ ایوان — جای گرفته است. این قوس به نشان معماری و وقار می‌بخشد و تصویرسازی را در هر اندازه مهار و خوانا نگه می‌دارد.',
+      'cr2-h':'تصویرسازی',
+      'cr2-p':'درون قوس، صحنه‌ای به شیوه‌ی مینیاتور با دست کشیده شده است. این صحنه شخصیت نشان را حمل می‌کند — از نزدیک پرجزئیات، و در اندازه‌های کوچک به نیم‌رخی مطمئن فشرده می‌شود. دقیقاً به همین دلیل است که نشانِ تک‌رنگ وجود دارد.',
+      'cr3-h':'دو عنوان',
+      'cr3-p':'عنوان فارسی بارِ برند را به دوش می‌کشد: نام، به خوشنویسیِ نستعلیق کشیده شده و خط پایه‌اش به امتدادی دراز رسیده است. نام لاتین زیر آن، با حروف‌نگاریِ سفارشیِ سریف به رنگ برنز نشسته است. هر دو یک‌بار و به‌عنوان اثر هنری کشیده شده‌اند — و هرگز نباید با فونت بازسازی شوند.',
+      'fig1-alt':'نشان تصویری رستمیان با نشانه‌های توضیح',
+      'lg1a':'<b>قوس</b> — نیم‌رخِ قاب',
+      'lg1b':'<b>صحنه</b> — مرکز مصوّر',
+      'fig2-alt':'ترکیب رستمیان با نشانه‌های توضیح — عنوان فارسی و حروف‌نگاری لاتین',
+      'lg2a':'<b>عنوان فارسی</b> — خوشنویسی سفارشی، عنوان اصلی برند',
+      'lg2b':'<b>حروف‌نگاری لاتین</b> — نام سفارشی سریف',
+      'nav-type':'تایپ',
+      'ty-kicker':'۰۵ — تایپوگرافی',
+      'ty-h2':'دو خطِ نگارش، دو فونتِ هم‌نشین.',
+      'ty-note':'برند به دو خطِ نگارش حرف می‌زند و هر خط، جفتِ خودش را دارد — برای لاتین، سریف کلاسیک در کنار گروتسکِ آرام؛ و برای فارسی، دوران در کنار نیان. خودِ عنوان‌های برند همچنان اثرِ هنریِ سفارشی می‌مانند و این فونت‌ها در خدمتِ متنِ پیرامون‌اند.',
+      'ty-r1':'لاتینِ نمایشی — تیترها و خطوط بزرگ.',
+      'ty-r2':'لاتینِ متن و برچسب — پاراگراف، یادداشت و کپشن.',
+      'ty-r3':'عنوان‌های فارسی — تیترها با دوران.',
+      'ty-r4':'متن و زیرنویس‌های فارسی — پاراگراف و برچسب با نیان.',
+      'ty-w1':'وزن‌های به‌کاررفته — ۵۰۰ · ۶۰۰',
+      'ty-w2':'وزن‌های به‌کاررفته — ۳۰۰ · ۴۰۰ · ۵۰۰',
+      'ty-w3':'وزن‌های به‌کاررفته — ۷۰۰',
+      'ty-w4':'وزن‌های به‌کاررفته — ۴۰۰ · ۷۰۰',
+      'pa-kicker':'۰۴ — رنگ',
+      'pa-h2':'پالت رنگی پروژه.',
+      'pa-note':'چهار رنگ، تمام این سیستم را حمل می‌کنند. برای کپی مقدار HEX روی هر نمونه کلیک کنید.',
+      'sw1-name':'برنز دودی','sw1-role':'رنگ نامِ نشان، تأکیدهای نمایشی، زمینه‌های آرام.','sw1-aria':'کپی رنگ برنز دودی',
+      'sw2-name':'قهوه‌ای تلخ','sw2-role':'آثار نشان تصویری، زمینه‌های عمیق، برچسب‌های ریز.','sw2-aria':'کپی رنگ قهوه‌ای تلخ',
+      'sw3-name':'مشکی عمیق','sw3-role':'نشان تک‌رنگ، متن، خطوط مویی.','sw3-aria':'کپی رنگ مشکی عمیق',
+      'sw4-name':'کاغذی','sw4-role':'پس‌زمینه‌ها، زمینه‌ی نشان معکوس، فضای تنفس.','sw4-aria':'کپی رنگ کاغذی',
+      'copy':'کپی',
+      'bal-label':'توازن پیشنهادی در کاربرد',
+      'seg1':'کاغذی ۵۸','seg2':'دودی ۲۴','seg3':'قهوه‌ای ۱۲','seg4':'۶',
+      'bal-aria':'توازن رنگ: کاغذی ۵۸ درصد، دودی ۲۴ درصد، قهوه‌ای ۱۲ درصد، مشکی ۶ درصد',
+      'pair-label':'ترکیب‌های تأییدشده',
+      'pair1':'کرم روی قهوه‌ای','pair2':'مشکی روی برنز','pair3':'قهوه‌ای روی کاغذ',
+      'pa-foot':'*مقادیر CMYK تقریبِ تبدیل‌اند — پیش از چاپ، روی پروف چاپی تأیید کنید. سفید خالص <span dir="ltr">(#FFFFFF)</span> فقط به‌صورت جزئیاتِ توخالی درون ترکیب عمودی دیده می‌شود؛ آن را بخشی از تصویرسازی بدانید، نه یک رنگِ زمینه‌ی مستقل.',
+      'us-kicker':'۰۶ — کاربرد',
+      'us-h2':'نگه‌داشتنِ تیزی نشان.',
+      'us-lead':'نشان با سه عادت از برخورد با دنیای واقعی سالم بیرون می‌آید — فضای امنِ دست‌ودل‌باز، مقیاس‌بندی درست، و رفتن به نشانِ تک‌رنگ وقتی رنگ یا کنتراست کم می‌آورد. نشان معکوس را روی زمینه‌های عمیق به کار ببرید و همیشه از فایل‌های مادر مقیاس بدهید.',
+      'cs-h':'فضای امن',
+      'cs-note':'حاشیه‌ای دست‌کم به اندازه‌ی <b>x</b> — یک‌چهارم عرض نشان تصویری — در هر چهار سو، از متن، خط و هر اثر دیگر خالی بماند.',
+      'cs-alt':'نشان تصویری درون حاشیه‌ی فضای امن',
+      'ms-h':'حداقل اندازه‌ها',
+      'ms1-b':'نشان تصویری','ms1-s':'حداقل ۲۴ پیکسل',
+      'ms1-alt':'نشان تصویری در حداقل اندازه‌ی ۲۴ پیکسل',
+      'ms2-b':'ترکیب اصلی','ms2-s':'حداقل ۱۲۰ پیکسل',
+      'ms2-alt':'ترکیب اصلی در حداقل عرض ۱۲۰ پیکسل',
+      'ms-note':'زیر این اندازه‌ها تصویرسازی فشرده می‌شود — به نشانِ تنها سوئیچ کنید یا جای نشان را بزرگ‌تر کنید.',
+      'dt-h':'از چه بپرهیزید',
+      'dt-sub':'نشان کشیده شده است — این کارها آن کشیده را می‌شکنند.',
+      'dt1':'<b>تناسبات را دستکاری نکنید</b> — نه کشش، نه فشردگی.',
+      'd1-alt':'نشان تصویری به‌اشتباه به‌صورت افقی کشیده شده',
+      'dt2':'<b>نشان را از محورش</b> نچرخانید.',
+      'd2-alt':'نشان تصویری به‌اشتباه چرخیده است',
+      'dt3':'<b>رنگی بیرون از پالت پروژه</b> به کار نبرید.',
+      'd3-alt':'نشان تصویری به‌اشتباه با رنگی بیرون از پالت',
+      'dt4':'<b>کنتراست را روی زمینه‌های آرام</b> از دست ندهید.',
+      'd4-alt':'نشان کرم روی زمینه‌ی کم‌کنتراستِ دودی',
+      'fl-kicker':'۰۷ — فایل‌ها',
+      'fl-h2':'آنچه تحویل داده می‌شود.',
+      'f1':'ترکیب اصلی دوزبانه — عنوان خوشنویسی فارسی بالای حروف‌نگاری لاتین، تمام‌رنگ.',
+      'f2':'نشان تصویری عمودی + حروف‌نگاری لاتین — تمام‌رنگ، برای جلد و تابلو.',
+      'f3':'نشان تصویری تنها — تک‌رنگ (پوزیتیو)، نسخه‌ی جمع‌وجور نشان.',
+      'f4':'نشان تصویری معکوس به رنگ کرم — برای زمینه‌های قهوه‌ای تلخ و تیره.',
+      'f5':'اثر مادر — فایل منبعِ قابل‌ویرایش ادوبی ایلوستریتور برای همه‌ی نسخه‌ها.',
+      'fl-note':'فایل‌های وکتور همان‌طور که تحویل داده شده‌اند آماده‌ی چاپ‌اند. برای چاپ، با مقادیر CMYK بخش رنگ تبدیل کنید و پیش از ارسال به چاپخانه، آثار فایل مادر را اوت‌لاین کنید.',
+      'ft-copy':'ارائه هویت بصری — ۲۰۲۶',
+      'ft-top':'بازگشت به بالا',
+      'toast-ok':'در حافظه کپی شد',
+      'toast-err':'کپی ناموفق بود — مقدار را دستی انتخاب کنید',
+      'dl':'PNG',
+      'dl-file':'دانلود',
+      'dl-done':'دانلود شد',
+      'dl-err':'دانلود ناموفق بود'
+    };
+
+    /* ---------- language switch ---------- */
+    var LS = 'rostamian:lang';
+    var baseTitle = document.title;
+    var mode = 'en';
+    var langSelect = document.getElementById('lang-select');
+
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      el.dataset.enHtml = el.innerHTML;
+    });
+    document.querySelectorAll('[data-i18n-alt]').forEach(function(el){
+      el.dataset.enAlt = el.getAttribute('alt') || '';
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){
+      el.dataset.enAria = el.getAttribute('aria-label') || '';
+    });
+
+    function applyLang(next){
+      mode = next;
+      var fa = (next === 'fa');
+      var root = document.documentElement;
+      root.lang = next;
+      root.dir = fa ? 'rtl' : 'ltr';
+      document.body.classList.toggle('fa', fa);
+      document.title = fa ? (dict['doc-title'] || baseTitle) : baseTitle;
+      document.querySelectorAll('[data-i18n]').forEach(function(el){
+        var k = el.getAttribute('data-i18n');
+        el.innerHTML = fa ? (dict[k] || el.dataset.enHtml) : el.dataset.enHtml;
+      });
+      document.querySelectorAll('[data-i18n-alt]').forEach(function(el){
+        var k = el.getAttribute('data-i18n-alt');
+        el.setAttribute('alt', fa ? (dict[k] || el.dataset.enAlt) : el.dataset.enAlt);
+      });
+      document.querySelectorAll('[data-i18n-aria]').forEach(function(el){
+        var k = el.getAttribute('data-i18n-aria');
+        el.setAttribute('aria-label', fa ? (dict[k] || el.dataset.enAria) : el.dataset.enAria);
+      });
+      if (langSelect) langSelect.value = next;
+      try { localStorage.setItem(LS, next); } catch(_) {}
+    }
+    if (langSelect) {
+      langSelect.addEventListener('change', function(){ applyLang(langSelect.value); });
+    }
+    var savedLang = null;
+    try { savedLang = localStorage.getItem(LS); } catch(_) {}
+    if (savedLang === 'fa') applyLang('fa');
+
+    /* ---------- toast + copy ---------- */
+    var toast = document.getElementById('toast');
+    var toastTimer = null;
+    function showToast(msg){
+      toast.innerHTML = msg;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 1800);
+    }
+    function copyText(text){
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        return navigator.clipboard.writeText(text);
+      }
+      return new Promise(function(res, rej){
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); res(); } catch(err){ rej(err); }
+        document.body.removeChild(ta);
+      });
+    }
+    document.querySelectorAll('.swatch-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var hex = btn.getAttribute('data-hex');
+        copyText(hex).then(function(){
+          showToast(mode === 'fa' ? '<bdi dir="ltr">' + hex + '</bdi> ' + dict['toast-ok'] : hex + ' copied to clipboard');
+        }).catch(function(){
+          showToast(mode === 'fa' ? dict['toast-err'] : 'Copy failed — select the value manually');
+        });
+      });
+    });
+    /* ---------- png downloads ---------- */
+    function downloadPng(src, name, w, h, btn){
+      btn.disabled = true;
+      fetch(src).then(function(r){ return r.text(); }).then(function(text){
+        var doc = new DOMParser().parseFromString(text, 'image/svg+xml');
+        var svg = doc.documentElement;
+        svg.setAttribute('width', w);
+        svg.setAttribute('height', h);
+        var url = URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(svg)], {type:'image/svg+xml;charset=utf-8'}));
+        var img = new Image();
+        img.onload = function(){
+          var canvas = document.createElement('canvas');
+          canvas.width = w; canvas.height = h;
+          var ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, w, h);
+          URL.revokeObjectURL(url);
+          canvas.toBlob(function(blob){
+            btn.disabled = false;
+            if (!blob) { showToast(mode === 'fa' ? dict['dl-err'] : 'PNG export failed'); return; }
+            var durl = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = durl; a.download = name;
+            document.body.appendChild(a); a.click(); document.body.removeChild(a);
+            setTimeout(function(){ URL.revokeObjectURL(durl); }, 2000);
+            showToast(mode === 'fa' ? dict['dl-done'] : 'PNG downloaded');
+          }, 'image/png');
+        };
+        img.onerror = function(){
+          btn.disabled = false;
+          URL.revokeObjectURL(url);
+          showToast(mode === 'fa' ? dict['dl-err'] : 'PNG export failed');
+        };
+        img.src = url;
+      }).catch(function(){
+        btn.disabled = false;
+        showToast(mode === 'fa' ? dict['dl-err'] : 'PNG export failed');
+      });
+    }
+    document.querySelectorAll('.tile .dl-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        downloadPng(btn.getAttribute('data-src'), btn.getAttribute('data-name'),
+          parseInt(btn.getAttribute('data-w'),10), parseInt(btn.getAttribute('data-h'),10), btn);
+      });
+    });
+  })();
+</script>
+</body>
+</html>
